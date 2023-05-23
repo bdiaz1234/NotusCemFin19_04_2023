@@ -1,0 +1,244 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EncryptionClassLibrary
+</name>
+</assembly>
+<members>
+<member name="T:EncryptionClassLibrary.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:EncryptionClassLibrary.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:EncryptionClassLibrary.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:EncryptionClassLibrary.LMEncryption.SymmetricEncryption">
+ <summary>
+ La Encripción Simetrica utiliza una única llave para Encriptar/Desencriptar
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.#ctor(EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Provider,System.Boolean)">
+ <summary>
+ Instancia un nuevo objeto de la clase SymmetricEncryption usando el provider especificado
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.KeySizeBytes">
+ <summary>
+ Tamaño de la Llave en bytes. Se usa el tamaño de la Llave por defecto para cualquier proveedor; 
+ si quiere forzar un tamaño de la Llave específico, establezca esta propiedad
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.KeySizeBits">
+ <summary>
+ Tamaño de la Llave en bits. Se usa el tamaño de la Llave por defecto para cualquier proveedor; 
+ si quiere forzar un tamaño de la Llave específico, establezca esta propiedad
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Key">
+ <summary>
+ La Llave usuada para Encriptar/Desencriptar datos
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.IntializationVector">
+ <summary>
+ Using the default Cipher Block Chaining (CBC) mode, all data blocks are processed using
+ the value derived from the previous block; the first data block has no previous data block
+ to use, so it needs an InitializationVector to feed the first block
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.RandomInitializationVector">
+ <summary>
+ Genera un Vector de Inicialización aleatorio, si no se proporcionó ninguno
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.RandomKey">
+ <summary>
+ Genera una Llave aleatoria, si no se proporcionó ninguna
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.ValidateKeyAndIv(System.Boolean)">
+ <summary>
+ Se asegura de que el objeto de tipo SymmetricAlgorithm tenga una Llave y un Vector de Inicialización
+ válidos antes de cualquier intento de Encriptar/Desencriptar
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Encrypt(EncryptionClassLibrary.LMEncryption.EncryptionData,EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Encripta los datos especificados utilizando la Llave proporcionada
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Encrypt(EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Encripta los datos especificados utilizando la Llave prestablecida y el
+ Vector de Inicializacion Prestablecido
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Encrypt(System.IO.Stream,EncryptionClassLibrary.LMEncryption.EncryptionData,EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Encripta el Stream usando la Llave proporcionada y el Vector de Inicialización proporcionado
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Encrypt(System.IO.Stream,EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Encripta el Stream usando la Llave especificada
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Encrypt(System.IO.Stream)">
+ <summary>
+ Encripta el Stream utilizando la Llave y el Vector de Inicialización preestablecidos
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Decrypt(EncryptionClassLibrary.LMEncryption.EncryptionData,EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Desencripta los datos especificados usando la Llave proporcionada y el Vector de Inicialización preestablecido
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Decrypt(System.IO.Stream,EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Desencripta el Stream especificado usando la Llave proporcionada y el Vector de Inicialización preestablecido
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Decrypt(System.IO.Stream)">
+ <summary>
+ Desencripta el Stream especificado usando la Llave y el Vector de Inicialización preestablecidos
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.SymmetricEncryption.Decrypt(EncryptionClassLibrary.LMEncryption.EncryptionData)">
+ <summary>
+ Desencripta los datos especificados utilizando la Llave y el Vector de Inicialización preestablecidos
+ </summary>
+</member>
+<member name="T:EncryptionClassLibrary.LMEncryption.EncryptionData">
+ <summary>
+ Representa los datos a Encriptar/Desencriptar en Hex, Byte, Base64 o String
+ </summary>
+</member>
+<member name="F:EncryptionClassLibrary.LMEncryption.EncryptionData.DefaultEncoding">
+ <summary>
+ Determina la codificación de texto por defecto para todas las instancias de EncryptionData
+ </summary>
+</member>
+<member name="F:EncryptionClassLibrary.LMEncryption.EncryptionData.Encoding">
+ <summary>
+ Determina la codificación de texto por defecto de esta instancia de EncryptionData
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.#ctor">
+ <summary>
+ Crear una nueva instancia
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.#ctor(System.Byte[])">
+ <summary>
+ Crear una nueva instanci con el array de Bytes especificado
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.#ctor(System.String)">
+ <summary>
+ Crea una nueva instancia con la cadena especificada
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.#ctor(System.String,System.Text.Encoding)">
+ <summary>
+ Crear una nueva instancia con la cadena especificada, usando la codificación especificada
+ para convertir la cadena en un array de bytes
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.IsEmpty">
+ <summary>
+ Retorna true si no hay datos presentes
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.StepBytes">
+ <summary>
+ Intervalos de avance permitidos en bytes para los datos de la clase. Si el valor es 0, no existe limite
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.StepBits">
+ <summary>
+ Intervalos de avance permitidos en bits para los datos de la clase. Si el valor es 0, no existe limite
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.MinBytes">
+ <summary>
+ Mínimo número de bytes permitidos para los datos de la clase. Si el valor es 0, no existe limite
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.MinBits">
+ <summary>
+ Mínimo número de bits permitidos para los datos de la clase. Si el valor es 0, no existe limite
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.MaxBytes">
+ <summary>
+ Maximo número de bytes permitidos para los datos de la clase. Si el valor es 0, no existe limite
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.MaxBits">
+ <summary>
+ Máximo número de bits permitidos para los datos de la clase. Si el valor es 0, no existe limite
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.Bytes">
+ <summary>
+ Retorna la representación en Bytes de los datos; 
+ Será rellenado al tamaño de MinBytes o recortado al tamaño de MaxBytes de ser necesario
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.Text">
+ <summary>
+ Establece o devuelve la representación en texto de los bytes, usando la codificación de texto por defecto
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.Hex">
+ <summary>
+ Establece o devuelve la representación Hexagecimal de los datos
+ </summary>
+</member>
+<member name="P:EncryptionClassLibrary.LMEncryption.EncryptionData.Base64">
+ <summary>
+ Establece o devuelve la representación Base64 de los datos
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.toString">
+ <summary>
+ Retorna la representación en texto de los bytes, usando la codificación de texto por defecto
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.toBase64">
+ <summary>
+ Retorna la representación en Base64 de los datos
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.toHex">
+ <summary>
+ Retorna la representación Hexagecimal de los datos
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.toHexLower">
+ <summary>
+ Retorna la representación Hexagecimal de los datos, en letra minúcula
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.ComputeMd5Hash(System.String)">
+ <summary>
+ Permite encriptar una cadena de entrada utilizando el algoritmo MD5
+ </summary>
+</member>
+<member name="M:EncryptionClassLibrary.LMEncryption.EncryptionData.getMD5Hash(System.String)">
+ <summary>
+ Retorna la cadena resultante de encriptar una cadena de entrada utilizando el algoritmo MD5
+ </summary>
+</member>
+</members>
+</doc>

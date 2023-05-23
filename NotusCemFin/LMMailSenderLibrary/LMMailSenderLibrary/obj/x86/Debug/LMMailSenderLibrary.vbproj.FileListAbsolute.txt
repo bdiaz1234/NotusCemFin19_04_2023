@@ -1,0 +1,4 @@
+C:\Users\Administrador.DESKTOP-HJV5VTB\Downloads\NotusCemFin19_04_2023\NotusCemFin\LMMailSenderLibrary\LMMailSenderLibrary\obj\x86\Debug\LMMailSenderLibrary.vbproj.AssemblyReference.cache
+C:\Users\Administrador.DESKTOP-HJV5VTB\Downloads\NotusCemFin19_04_2023\NotusCemFin\LMMailSenderLibrary\LMMailSenderLibrary\obj\x86\Debug\LMMailSenderLibrary.Resources.resources
+C:\Users\Administrador.DESKTOP-HJV5VTB\Downloads\NotusCemFin19_04_2023\NotusCemFin\LMMailSenderLibrary\LMMailSenderLibrary\obj\x86\Debug\LMMailSenderLibrary.vbproj.GenerateResource.cache
+C:\Users\Administrador.DESKTOP-HJV5VTB\Downloads\NotusCemFin19_04_2023\NotusCemFin\LMMailSenderLibrary\LMMailSenderLibrary\obj\x86\Debug\LMMailSenderLibrary.vbproj.CoreCompileInputs.cache
